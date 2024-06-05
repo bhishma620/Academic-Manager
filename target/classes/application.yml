@@ -1,0 +1,61 @@
+#spring.datasource.url=jdbc:postgresql://dpg-co22nb6d3nmc73a2kr0g-a.singapore-postgres.render.com/ams_r4cc
+#
+#spring.datasource.username=root
+#spring.datasource.password=rALuseMOwQrHIR3w0dPOCVUv0aONNjC5
+#
+#spring.jpa.show-sql=true
+#spring.jpa.generate-ddl=true
+#spring.jpa.hibernate.ddl.auto=update
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# Gmail SMTP Server Configuration
+
+#spring.mail.host=smtp.gmail.com
+#spring.mail.port=587
+#spring.mail.username=decodersteam2025@gmail.com
+#spring.mail.password=kfed duye yhct kalt
+#spring.mail.properties.mail.smtp.auth=true
+#spring.mail.properties.mail.smtp.starttls.enable=true
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-co22nb6d3nmc73a2kr0g-a.singapore-postgres.render.com/ams_r4cc
+    username: root
+    password: rALuseMOwQrHIR3w0dPOCVUv0aONNjC5
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl:
+        auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: contact.ams.system@gmail.com
+    password: zyyt gxno mplv ntji
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  cache:
+    type: redis
+    host: localhost
+    port: 6379
+    redis:
+      time-to-live: 60000
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+ams-authentication:
+  otp-validation-time: 600 #time in second (10 min)
+  substitute-teacher-validation-time: 36000 # 10 hours
